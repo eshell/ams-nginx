@@ -1,12 +1,12 @@
 server {
 	listen 80;
 
-	root /home/eric/Documents/www/ams-moguls/app;
+	root /home/eric/Documents/www/todos.dev/client/app;
 
-	server_name moguls.ams.dev;
+	server_name todos.dev;
 
     	location /api {
-        	proxy_pass http://127.0.0.1:3000;
+        	proxy_pass http://127.0.0.1:3001;
         	proxy_http_version 1.1;
         	proxy_set_header Upgrade $http_upgrade;
         	proxy_set_header Connection 'upgrade';
